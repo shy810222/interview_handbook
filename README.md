@@ -19,7 +19,7 @@ Interview Study
    - Render Tree 구축(여기서는 화면에 표시하지 않을 DOM요소는 제외)
    - Layout(Reflow)
    - Paint
-2. 호이스팅
+2. Hoisting
     - var 변수와 함수 선언문을 함수 유효범위 최상단으로 올리는 것을 말한다.(let, const 제외)
     - 함수표현식은 javascript 엔진에 따라 다름
         ```javascript
