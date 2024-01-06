@@ -95,7 +95,7 @@ Interview Study
 10. this에 대한 설명
    - 호출이 될 때 값이 결정이 되며 호출방식에 따라 달라짐
    - new나 객체의 함수 호출은 해당 객체, apply, call, bind는 인수 객체, 그외는 use strict면 undefined 아니면 window
-    
+
 
 ### React 질문
 ### Vue 질문
