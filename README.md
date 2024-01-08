@@ -97,8 +97,8 @@ Interview Study
    - 하위요소가 많고 공통의 이벤트가 있을 때 상위 요소에 이벤트를 추가하는 방법으로 event bubling에 의해 이벤트가 실행됨
    - 하나의 이벤트 핸들러만 필요하기에 최적화에 좋고 하위요소의 변동이 있을 때마다 이벤트 해제 및 바인딩 필요가 없음
 10. this에 대한 설명
-   - 호출이 될 때 값이 결정이 되며 호출방식에 따라 달라짐
-   - new나 객체의 함수 호출은 해당 객체, apply, call, bind는 인수 객체, 그외는 use strict면 undefined 아니면 window
+      - 호출이 될 때 값이 결정이 되며 호출방식에 따라 달라짐
+      - new나 객체의 함수 호출은 해당 객체, apply, call, bind는 인수 객체, 그외는 use strict면 undefined 아니면 window
 
 
 ### React 질문
