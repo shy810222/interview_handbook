@@ -4,8 +4,10 @@ Interview Study
 
 ## 공통 질문
 1. 프로세스와 스레드의 차이
-2. wrapper 타입 설명
-3. Stack, Que
+   - 프로세스는 운영체제로부터 할당받은 작업의 단위
+   - 스레드는 프로세스가 할당받은 자원을 이용하는 실행 흐름의 단위
+3. wrapper 타입 설명
+4. Stack, Que
    - Stack은 후입선출, Que는 선입선출
 
 ## Front End 질문
