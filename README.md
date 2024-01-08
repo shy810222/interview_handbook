@@ -112,7 +112,10 @@ Interview Study
 
 ### 기타 정리사항
 1. 서버에서 클라이언트로 메세지 전송 방법
-   1.1 polling
+   1.1. polling
+   1.2. long-polling
+   1.3. WebSocket
+   1.4. Server-sent Events
 
 
 
