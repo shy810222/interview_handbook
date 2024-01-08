@@ -112,7 +112,7 @@ Interview Study
 ## Back End 질문
 ### Spring 질문
 1. Bean 종류
-   - 싱글톤 스코프: 스프링 컨테이너가 사라지기전까지 한개만 유지
+   - 싱글톤 스코프: 스프링 컨테이너가 사라지기전까지 한개만 유지하며 별다른 설정이 없으면 싱글톤 스코프로 생성된다.
    - 프로토타입 스코프: DI가 발생할 때마다 새로운 객체가 생성되어 주입된다
    - 웹 스코프: Request, Session, Application, WebSocket 총 네개가 있으며 생명주기는 이름과 동일하다
 2. 싱글톤 빈 생명주기
@@ -122,9 +122,26 @@ Interview Study
 6. Component와 Bean 등록 차이점
    - Annotation의 위치가 다르다
    - Component는 ComponentScan에 의 해서 자동으로 등록된다
-   - Bean 직접 등록을 해야하면 @Configuration에서 하는 것을 무조건 권장한다
-7. @Configuration
-8. DI 동작원리
+   - Bean 직접 등록을 해야하면 @Configuration에서 하는 것을 무조건 권장한다(CGLib로 프록시 패턴을 적용해 수동으로 등록하는 빈의 싱글톤 보장)
+7. @Configuration proxyBeanMethods
+   - proxyBeanMethods을 false로 설정할 경우 Configuration에서 등록하는 빈의 싱글톤을 보장하지 않는다
+9. DI(의존성 주입)
+   - 의존성 주입은 생성자, 필드, Setter 주입 세가지가 있고 생성자 주입을 가장 권장한다.
+   - !왜 생성자 주입을 권장하는가? -> 생성자 주입을 해야 빈이 생성될 때 1번만 주입이 가능하여 객체의 불변성이 보장되고 단위 테스트가 쉽다.
+10. AOP - Aspect Oriented Programming(관점 지향 프로그래밍)
+   1. AOP 주요개념
+      - Aspect: 관심사를 모듈화한 것
+      - Target: Aspect를 적용하는 대상이 되는 객체
+      - Advice: 실제 기능을 담은 구현체
+      - JoinPoint: Advice가 적용될 시점이며 스프링 AOP는 프록시 방식을 사용해 항상 메서드 실행 시점이다
+      - PointCut: JoinPoint 중에서 Advice가 적용될 위치를 선별하며 스프링 AOP는 메서드 실행 시점만 가능하다
+   2. AOP 실행 시점 지정 Annotation
+      - Before: 타겟 메소드가 호출되기 전에 어드바이스 수행
+      - After: 결과(성공, 예외)와 관계없이 타겟 메소드가 완료되면 어드바이스 수행
+      - AfterReturning: 타겟 메소드가 정상 수행 후 어드바이스 수행
+      - AfterThrowing: 타겟 메소드가 예외를 던지면 어드바이스 수행
+      - Around: 어드바이스가 타겟 메소드를 감싸서 호출 전과 후에 어디바이스를 수행
+      - 동작 순서는 Around(타겟 실행 전) -> Before -> AfterThrowing -> AfterReturning -> After -> Around(타겟 실행 후)
 
 ### JPA 질문
 1. 왜 사용하는가?
