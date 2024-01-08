@@ -109,3 +109,12 @@ Interview Study
 ## Back End 질문
 ### Spring 질문
 ### JPA 질문
+
+### 기타 정리사항
+1. 서버에서 클라이언트로 메세지 전송 방법
+   1.1 polling
+
+
+
+
+
