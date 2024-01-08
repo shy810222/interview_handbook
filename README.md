@@ -142,6 +142,16 @@ Interview Study
        - AfterThrowing: 타겟 메소드가 예외를 던지면 어드바이스 수행
        - Around: 어드바이스가 타겟 메소드를 감싸서 호출 전과 후에 어디바이스를 수행
        - 동작 순서는 Around(타겟 실행 전) -> Before -> AfterThrowing -> AfterReturning -> After -> Around(타겟 실행 후)
+    3. Pointcut 종류
+       - execution: (접근제어자? 반환타입 선언타입?메서드이름(파리미터) 예외?)
+       - within: 타입이 매칭되면 그 안의 모든 메서드가 매칭된다.
+       - args, @target, @within: 단독으로 사용하면 안되고 주의가 필요함
+       - @annottaion: 메서드에 해당 annotation이 있을 경우 매칭된다
+       - bean: 스프링 빈 이름으로 매칭된다
+    4. CGLib와 JDK 동적 프록시
+       - 인터페이스가 없다면 CGLib로 프록시 생성
+       - JDK 동적 프록시는 구체 클래스로 타입 캐스팅 불가능하다(MemberServiceImpl 프록시 생성 시 MemberService로는 타입캐스팅이 가능하나, MemberServiceImpl로는 타입캐스팅이 불가능)
+       - CGLib는 구체 클래스로 타입 캐스팅 가능(MemberServiceImpl 프록시 생성 시 MemberService 및 MemberServiceImpl로 타입캐스팅 가능)
 
 ### JPA 질문
 1. 왜 사용하는가?
