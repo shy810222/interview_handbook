@@ -212,7 +212,8 @@ Interview Study
    4. Server-sent Events
       - html5 표준이며 서버에서 클라이언트로 단방향 전송
 
-
+브러우저리스트 공부
+jpa더 공부
 
 
 
