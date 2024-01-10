@@ -205,6 +205,9 @@ Interview Study
         2. 어플리케이션 레벨에서 지원하는 락이다
         3. @Version: Entity의 버전을 관리할 수 있는 Annotation이며 사용 시 최초 커밋만 인정하게 할 수 있다
         4. LockModeType
+            - NONE(default): 수정 시점에 버전 증가
+            - OPTIMISTIC: 조회해도 버전을 체크한다. 트랜잭션 동안 변경되지 않음을 보장
+            - OPTIMISTIC_FORCE_INCREMENT: 논리적인 변경(연관 관계의 엔티티가 변경)되었을 경우 버전을 증가하고 싶을때
     - 비관적 락
         1. DB의 락을 사용하여 동시성을 제어
 
