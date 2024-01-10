@@ -155,7 +155,7 @@ Interview Study
        - 인터페이스가 없다면 CGLib로 프록시 생성
        - JDK 동적 프록시는 구체 클래스로 타입 캐스팅 불가능하다(MemberServiceImpl 프록시 생성 시 MemberService로는 타입캐스팅이 가능하나, MemberServiceImpl로는 타입캐스팅이 불가능)
        - CGLib는 구체 클래스로 타입 캐스팅 가능(MemberServiceImpl 프록시 생성 시 MemberService 및 MemberServiceImpl로 타입캐스팅 가능)
-    5.Filter, Interceptor, AOP 순서 및 차이점
+    5. Filter, Interceptor, AOP 순서 및 차이점
        - 순서는 Filter(pre) -> Interceptor(pre) -> AOP -> Interceptor(post) -> Filter(post)
        - Filter는 스프링이 아닌 WAS에서 지원하는 영역으로 스프링 빈을 사용할 수 없다.
        - Interceptor는 스프링 영역이나 요청이 Controller 전, 후, 그리고 view가 그려진 뒤에만 적용이 된다
