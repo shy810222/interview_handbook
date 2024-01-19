@@ -161,7 +161,7 @@ Interview Handbook
        - CGLib는 구체 클래스로 타입 캐스팅 가능(MemberServiceImpl 프록시 생성 시 MemberService 및 MemberServiceImpl로 타입캐스팅 가능)
     5. Filter, Interceptor, AOP 순서 및 차이점
        - 순서는 Filter(pre) -> Interceptor(pre) -> AOP -> Interceptor(post) -> Filter(post)
-       - Filter는 스프링이 아닌 WAS에서 지원하는 영역으로 스프링 빈을 사용할 수 없다.
+       - Filter는 스프링이 아닌 WAS에서 지원하는 영역으로 스프링 빈을 사용할 수 없다.(해당 사항에 대해서 확인 필요!!)
        - Interceptor는 스프링 영역이나 요청이 Controller 전, 후, 그리고 view가 그려진 뒤에만 적용이 된다
        - AOP 스프링 빈의 메서드 레벨에 적용이 되며 서비스 로직, controller 등 다양한 위치에서 적용할 수 있다
 
